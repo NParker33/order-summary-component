@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --hover-blue: hsl(245, 75%, 62%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(223, 47%, 23%);
+    --main-text: hsl(224,23%,55%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('assets/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--pale-blue);
+}
+
+main {
+    height: 100%;
+    padding: 100px 20px;
+}
+
+header,
+section {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.component {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 15px 15px rgba(0,0,0,0.2);
+/*     width: 100%; */
+    width: clamp(300px, 100%, 375px)
+}
+
+.hero img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.summary {
+    padding: 15px;
+    text-align: center;
+}
+
+.summary h1 {
+    margin: 10px;
+    font-weight: 900;
+}
+
+.summary p {
+    color: var(--main-text);
+    line-height: 1.7;
+    padding: 15px;
+}
+
+.pricing {
+    background: var(--very-pale-blue);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.pricing h3 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.price-group p{
+    color: var(--main-text);
+}
+
+.pricing a {
+    font-weight: 700;
+    color: var(--bright-blue);
+    transition: all ease .3s;
+}
+
+.pricing a:hover {
+    color: var(--hover-blue);
+    text-decoration: none;
+}
+
+.buttons {
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+#primaryBtn {
+    background: var(--bright-blue);
+    color: var(--pale-blue);
+    padding: 10px 15px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#primaryBtn:hover,
+#primaryBtn:active {
+    background: var(--hover-blue);
+}
+
+#secondaryBtn {
+    color: var(--main-text);
+    font-weight: 900;
+    font-size: .9rem;
+}
+
+#secondaryBtn:hover {
+    color: var(--desaturated-blue);
+}
+
+.btn {
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+@media screen and (min-width: 425px){
+    body {
+        background: url('assets/pattern-background-desktop.svg');
+        background-repeat: repeat-x;
+        background-position: top;
+        background-color: var(--pale-blue);
+    }
+
+}
